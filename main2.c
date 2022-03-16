@@ -15,11 +15,11 @@ int main() {
   fclose(F1);
   FILE *F2;
   F2 = fopen("norm.dot", "a");
-  fprintf(F2, "digraph G {\n");
+  fprintf(F2, "graph G {\n");
   for (int i = 0; i <= 4; i++)
     for (int j = i; j <= 4; j++)
       for (int l = x[i][j]; l >= 1; l--)
-        fprintf(F2, "\tx%d -> x%d;\n", i + 1, j + 1);
+        fprintf(F2, "\tx%d -- x%d;\n", i + 1, j + 1);
   fprintf(F2, "}");
   fclose(F2);
 }
